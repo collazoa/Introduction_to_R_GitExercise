@@ -2,7 +2,7 @@ mydata = read.csv("example_data.csv")
 plot(mydata$xdata,mydata$ydata,col='red')
 # some guesses for the parameters.
 p1 = 1
-p2 = 0.2
+p2 = 0.5
 
 # do the fit
 fit = nls(ydata ~ p1*cos(p2*xdata) + p2*sin(p1*xdata), data = mydata, start = list(p1=p1,p2=p2))
